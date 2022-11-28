@@ -192,6 +192,8 @@ function filterItalianFoodWithServingSizeGT5(){
         }})
 
     return results
+
+    // another method
     // let newresults;
     // newresults = results.filter(function(element){
     //     if(element.servings > 5){
@@ -212,7 +214,22 @@ console.log('ItalianFood from filterItalianFoodWithServingSizeGT5', ItalianFood)
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
 
+function filterFoodWithMatchingIdAndServings(){
 
+    let results;
+    results = dishes.filter(function(element){
+        if(element.id == element.servings){
+            return true
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+
+let Food = filterFoodWithMatchingIdAndServings();
+console.log('Food from filterFoodWithMatchingIdAndServings', Food)
 
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
