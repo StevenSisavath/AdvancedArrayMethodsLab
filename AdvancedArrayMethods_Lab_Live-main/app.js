@@ -281,6 +281,23 @@ console.log('FoodWithChickpeas from filterFoodWithChickpeas', FoodWithChickpeas)
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
+function filterFoodWithUserIngrediant(){
+    userIngrdient = prompt('Enter the ingrediant of your liking!')
+
+    let results;
+    results = dishes.filter(function(element){
+        if(element.ingredients.includes(userIngrdient)){
+            return true
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+
+let FoodWithUserIngrediant = filterFoodWithUserIngrediant();
+console.log('FoodWithUserIngrediant from filterFoodWithUserIngrediant', FoodWithUserIngrediant)
 
 
 
