@@ -260,6 +260,22 @@ console.log('evenServingCountFood from filterFoodWithMatchingIdAndServings', eve
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Double Hint: Research 'javascript does array include item'
 //Filter
+function filterFoodWithChickpeas(){
+
+    let results;
+    results = dishes.filter(function(element){
+        if(element.ingredients.includes('chickpea')){
+            return true
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+
+let FoodWithChickpeas = filterFoodWithChickpeas();
+console.log('FoodWithChickpeas from filterFoodWithChickpeas', FoodWithChickpeas)
 
 
 
