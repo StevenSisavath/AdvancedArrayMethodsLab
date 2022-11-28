@@ -303,6 +303,16 @@ console.log('FoodWithUserIngrediant from filterFoodWithUserIngrediant', FoodWith
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
+function mapCuisineTypes(){
+    let results;
+    results = dishes.map(function(element){
+        return element.cuisine
+    })
+    return results;
+}
+
+let CuisineTypes = mapCuisineTypes();
+console.log('CuisineTypes from mapCuisineTypes', CuisineTypes)
 
 
 
