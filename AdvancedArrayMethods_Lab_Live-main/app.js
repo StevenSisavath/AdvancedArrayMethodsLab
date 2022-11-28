@@ -355,6 +355,29 @@ function filterUserCuisineAndMapFood(){
 let food = filterUserCuisineAndMapFood();
 console.log('Food from filterUserCuisineAndMapFood', food)
 
+// MVP Version
+// function filterCuisineAndMapFood(){
+//     let results;
+//     results = dishes.filter(function(element){
+//         if(element.cuisine == 'Vegetarian'){
+//             return true
+//         }
+//         else{
+//             return false
+//         }})
+
+//     let newresults;
+//     newresults = results.map(function(element){
+//         return element.cuisine + ' ' + element.name
+//     })
+
+//     return newresults;
+
+// }
+
+// let food = filterCuisineAndMapFood();
+// console.log('Food from filterCuisineAndMapFood', food)
+
 
 
 //BONUS
