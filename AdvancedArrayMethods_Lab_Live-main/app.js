@@ -230,8 +230,8 @@ function filterFoodWithMatchingIdAndServings(){
     return results;
 }
 
-let Food = filterFoodWithMatchingIdAndServings();
-console.log('Food from filterFoodWithMatchingIdAndServings', Food)
+let FoodWithMatchingIDsAndServings = filterFoodWithMatchingIdAndServings();
+console.log('FoodWithMatchingIDsAndServings from filterFoodWithMatchingIdAndServings', FoodWithMatchingIDsAndServings)
 
 
 
@@ -331,8 +331,29 @@ console.log('CuisineTypeWithDish from mapCuisineTypeWithDish', CuisineTypeWithDi
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
+function filterUserCuisineAndMapFood(){
+    userCuisine = prompt('Enter the cuisine of your liking!')
 
+    let results;
+    results = dishes.filter(function(element){
+        if(element.cuisine == userCuisine){
+            return true
+        }
+        else{
+            return false
+        }})
 
+    let newresults;
+    newresults = results.map(function(element){
+        return element.cuisine + ' ' + element.name
+    })
+
+    return newresults;
+
+}
+
+let food = filterUserCuisineAndMapFood();
+console.log('Food from filterUserCuisineAndMapFood', food)
 
 
 
