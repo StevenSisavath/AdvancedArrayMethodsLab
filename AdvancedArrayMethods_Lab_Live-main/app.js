@@ -138,7 +138,6 @@ console.log('mexicanFood from filterExample', mexicanFood)
 //Reminder: Do not move on to problem one until understand the example completely!!
 //1. Create a function that will return all dishes with the cuisine type of "vegetarian"
 //Filter
-
 function filterVegetarianFood(){
 
     let results;
@@ -155,6 +154,8 @@ function filterVegetarianFood(){
 
 let vegetarianFood = filterVegetarianFood();
 console.log('vegetarianFood from filterVegetarianFood', vegetarianFood)
+
+
 
 //2. Create a function that will prompt the user to enter a cuisine type and then return all dishes that match that type
 //Filter
@@ -176,6 +177,7 @@ function filterUserCuisineFood(){
 
 let UserCuisineFood = filterUserCuisineFood();
 console.log('UserCuisineFood from filterUserCuisineFood', UserCuisineFood)
+
 
 
 //3. Create a function that will return all dishes with the cuisine type of "Italian" and a serving size greater than 5.
@@ -211,9 +213,9 @@ let ItalianFood = filterItalianFoodWithServingSizeGT5();
 console.log('ItalianFood from filterItalianFoodWithServingSizeGT5', ItalianFood)
 
 
+
 //4. Create a function that will return only dishes whose id number matches their serving count.
 //Filter
-
 function filterFoodWithMatchingIdAndServings(){
 
     let results;
@@ -231,8 +233,26 @@ function filterFoodWithMatchingIdAndServings(){
 let Food = filterFoodWithMatchingIdAndServings();
 console.log('Food from filterFoodWithMatchingIdAndServings', Food)
 
+
+
 //5. Create a function that will return only dishes whose serving count is even.
 //Filter
+function filterFoodWithEvenServingCount(){
+
+    let results;
+    results = dishes.filter(function(element){
+        if(element.servings % 2 == 0){
+            return true
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+
+let evenServingCountFood = filterFoodWithEvenServingCount();
+console.log('evenServingCountFood from filterFoodWithMatchingIdAndServings', evenServingCountFood)
 
 
 
