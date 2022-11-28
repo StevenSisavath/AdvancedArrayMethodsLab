@@ -383,6 +383,17 @@ console.log('Food from filterUserCuisineAndMapFood', food)
 //BONUS
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
+function mapCuisineTypesBonus(){
+    let results;
+    results = dishes.map(function(element){
+        return element.cuisine
+    })
+    let newResults = [...new Set(results)];
+    return newResults
+}
+
+let CuisineTypesBonus = mapCuisineTypesBonus();
+console.log('CuisineTypes from mapCuisineTypesBonus', CuisineTypesBonus)
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
