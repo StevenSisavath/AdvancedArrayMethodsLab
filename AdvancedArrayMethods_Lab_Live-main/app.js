@@ -395,11 +395,45 @@ function mapCuisineTypesBonus(){
 let CuisineTypesBonus = mapCuisineTypesBonus();
 console.log('CuisineTypes from mapCuisineTypesBonus', CuisineTypesBonus)
 
+
+
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
 //Filter
+function filterFoodWithTomatoOrCheese(){
+
+    let results;
+    results = dishes.filter(function(element){
+        if(element.ingredients.includes('tomato') || element.ingredients.includes('cheese')){
+            return true
+        }
+        else{
+            return false
+        }})
+
+    return results;
+}
+
+let FoodWithTomatoOrCheese = filterFoodWithTomatoOrCheese();
+console.log('FoodWithTomatoOrCheese from filterFoodWithTomatoOrCheese', FoodWithTomatoOrCheese)
+
+
 
 //12. Create a function that will return the total serving count of all dishes.
 //Must use Reduce, not a loop.
+function getSumOfServings(){
+    let servings = dishes.map(function(element){
+        return element.servings
+    })
+    let sum = servings.reduce(function(total, el){
+        return total + el
+    })
+
+    return sum
+}
+
+let SumOfServings = getSumOfServings();
+console.log('SumOfServings from getSumOfServings', SumOfServings)
+
 
 //13. Create a function that will return an array of any objects that do not share a cuisine type with any other objects.
