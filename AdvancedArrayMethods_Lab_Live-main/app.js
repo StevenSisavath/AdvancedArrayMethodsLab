@@ -318,7 +318,16 @@ console.log('CuisineTypes from mapCuisineTypes', CuisineTypes)
 
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
+function mapCuisineTypeWithDish(){
+    let results;
+    results = dishes.map(function(element){
+        return element.cuisine + ' ' + element.name
+    })
+    return results;
+}
 
+let CuisineTypeWithDish = mapCuisineTypeWithDish();
+console.log('CuisineTypeWithDish from mapCuisineTypeWithDish', CuisineTypeWithDish)
 
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
